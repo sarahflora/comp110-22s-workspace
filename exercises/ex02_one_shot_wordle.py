@@ -20,7 +20,7 @@ while i < len(secret):
         i = i + 1
     else:
         # loop changes bool value contained_in_word if indexed value is found in other part of secret word
-        contained_in_word: bool = False
+        contained_in_word: bool = False 
         i_two: int = 0
         while i_two < len(secret) and contained_in_word is False:
             if secret[i_two] == guess[i]:
