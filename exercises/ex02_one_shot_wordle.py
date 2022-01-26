@@ -1,4 +1,4 @@
-"""one shot worldle, a continuation of ex01."""
+"""One shot worldle, a continuation of ex01."""
 __author__ = "730456646"
 
 secret: str = "python"
