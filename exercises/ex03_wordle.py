@@ -2,7 +2,7 @@
 __author__ = "730456646"
 
 
-def contains_char(guess: str, letter: str):
+def contains_char(guess: str, letter: str) -> bool:
     """Searches through guessed word to see if the word contains the letter."""
     assert len(letter) == 1
     i: int = 0
@@ -50,16 +50,18 @@ def main() -> None:
     """The entrypoint of the program and main game loop."""
     turn: int = 1
     secret: str = "codes"
-    while turn <= 6:
+    win: bool = False
+    while turn <= 6 and win is False:
         print(f"=== Turn {turn}/6 ===")
         guess_main: str = input_guess(len(secret))
         print(emojified(guess_main, secret))
         if guess_main == secret:
             print(f"You won in {turn}/6 turns!")
-            exit()
+            win = True
         else:
             turn += 1
-    print("X/6 - Sorry, try again tomorrow!")
+    if win is False:
+        print("X/6 - Sorry, try again tomorrow!")
 
 
 if __name__ == "__main__":

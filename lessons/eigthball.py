@@ -1,0 +1,17 @@
+"""An oracle that predicts the future."""
+
+from random import randint
+
+input("Ask a yes/no questionL ")
+
+response: int = randint(0, 3)
+print(response)
+
+if response == 0:
+    print("Most definitely")
+elif response == 1:
+    print("Highly likely")
+elif response == 2:
+    print("Ask again later")
+else:
+    print("No way, not a chance")
