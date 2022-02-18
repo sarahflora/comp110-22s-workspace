@@ -1,4 +1,4 @@
-"""This program will use Turtle objects to create two pine trees and two *magical* apple trees, a blue sky, and a funky patch of grass, creating a most delightful arboretum.
+"""This program will use Turtle objects to create two pine trees and two *magical* apple trees, and a funky patch of grass, creating a most delightful arboretum.
 for #7, the apple function calls the color_pick function, the pine_tree function calls pine and tree_trunk, the apple_tree function call apple and tree_trunk. For #8, I used some
 new functions I didn't know from the tutorial including .dot, .backward, and replacements for some that I learned like .up for .pen up, etc...
 I used a nested while loop to create stacked triangles for my pine tree. I also included randomness by using randint in the color_pick function to pick from a list of colors.
@@ -18,7 +18,6 @@ def main() -> None:
     apple_tree(artist, -50, 0)
     pine_tree(artist, 100, 0)
     apple_tree(artist, 250, 0)
-    artist.screen.bgcolor(181, 241, 247)
     grass(artist, -325, -100, 45)
     done()
 
@@ -69,7 +68,7 @@ def color_pick() -> str:
     """Randomly choose color from list, will be used for magical apple colors."""
     list_color: list = ["red", "pink", "orange", "yellow", "brown", "black", "white", "blue", "purple"]
     pick: int = randint(1, 8)
-    return list_color[pick]
+    return str(list_color[pick])
 
 
 def apple(art: Turtle, x: float, y: float) -> None:
